@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>3D Studio — website image renderer</title>
+  <style>
+    body { margin: 0; background: #060908; color: #cfd8d3; font: 13px/1.4 system-ui, sans-serif; }
+    header { position: sticky; top: 0; z-index: 5; display: flex; gap: 6px; flex-wrap: wrap; padding: 10px; background: #0b100e; border-bottom: 1px solid #1c2622; }
+    button { background: #16201c; color: #dfe8e3; border: 1px solid #2a3832; border-radius: 8px; padding: 6px 10px; cursor: pointer; font: inherit; }
+    button.primary { background: #ffffff; color: #0a0a0a; border-color: #ffffff; font-weight: 600; }
+    #status { padding: 8px 12px; color: #9fb0a8; }
+    #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; padding: 12px; }
+    figure { margin: 0; background: radial-gradient(circle at 50% 35%, #2a2c30, #070707 72%); border: 1px solid #1c2622; border-radius: 14px; padding: 10px; }
+    figure img { width: 100%; height: 300px; object-fit: contain; display: block; }
+    figcaption { color: #8fa29a; padding-top: 6px; }
+  </style>
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  } }
+  </script>
+</head>
+<body>
+  <header id="bar"></header>
+  <div id="status">Loading three.js…</div>
+  <div id="grid"></div>
+  <script type="module" src="./studio.js"></script>
+</body>
+</html>
