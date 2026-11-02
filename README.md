@@ -27,7 +27,9 @@ Then open http://localhost:5173. You can also just double-click `website/index.h
 
 ## Deploy
 
-Upload the `website` folder to any static host: Netlify (drag and drop), Vercel, Cloudflare Pages, GitHub Pages or Hostinger.
+Live site: https://jatinkatariaaaa.github.io/websitecoach/
+
+Every push to `main` publishes the `website` folder to GitHub Pages automatically (`.github/workflows/pages.yml`). You can also upload the `website` folder to any static host: Netlify (drag and drop), Vercel, Cloudflare Pages or Hostinger.
 
 ## Before going live
 
@@ -39,7 +41,7 @@ Upload the `website` folder to any static host: Netlify (drag and drop), Vercel,
 6. **Photos**: the people photos (hero, About, "Four ways we teach", CTA pill) are free Unsplash stock images (Unsplash License: free for commercial use, no attribution required). They are saved locally in `website/assets/photos/`, so the site doesn't depend on Unsplash. To swap one for your own photo, replace the file (same name) or change the `src` in `index.html`.
 7. **Certificate**: the 3D certificate shows "Your Name" and "Mentor" as sample text. Edit the text in `tools/3d-studio/studio.js` (asset `certificate`) and re-render if you want different wording.
 8. **Testimonials**: there are none on purpose. Add real student reviews once you have them; don't use made-up ones.
-9. **Social preview image**: change `og:image` to a full URL on your domain.
+9. **Social preview & canonical URL**: they point at the GitHub Pages address. If you move to your own domain, update `og:image`, `og:url` and `canonical` in `index.html`.
 10. **Legal**: have the risk disclaimer and the "Is forex trading legal in India?" answer reviewed by a lawyer or CA (SEBI / RBI / FEMA rules apply).
 
 ## Re-render the 3D images (e.g. to change colours)
